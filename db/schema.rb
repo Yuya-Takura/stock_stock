@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2019_01_11_025128) do
   enable_extension "plpgsql"
 
   create_table "stocks", force: :cascade do |t|
-    t.string "name", null: false
     t.string "code", null: false
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["code"], name: "index_stocks_on_code", unique: true
