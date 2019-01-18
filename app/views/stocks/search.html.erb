@@ -1,5 +1,10 @@
 <h1>Stocks#search</h1>
 <p>Find me in app/views/stocks/search.html.erb</p>
 
-<%= @stocks[0].code %>
-<%= @stocks[0].name %>
+<% if @stocks.present? %>
+  <% @stocks.each do |stock| %>
+    <%= stock.code %> <%= stock.name %><br>
+  <% end %>
+<% else %>
+  <div>検索結果はありません。</div>
+<% end %>
