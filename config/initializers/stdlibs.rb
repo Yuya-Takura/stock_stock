@@ -1,2 +1,5 @@
 require 'csv'
 require 'nkf'
+require 'quandl'
+require 'nokogiri'
+require 'open-uri'

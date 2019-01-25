@@ -69,3 +69,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'poppler', '~> 3.3', '>= 3.3.1'
 gem 'ransack', '~> 2.1'
 gem 'quandl', '~> 1.1.0'
+gem 'nokogiri', '~> 1.10', '>= 1.10.1'
