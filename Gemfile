@@ -45,6 +45,7 @@ group :development, :test do
   gem 'pry-stack_explorer'
   gem 'dotenv-rails', '~>2.6'
   gem 'selenium-webdriver', '~> 3.141'
+  gem 'factory_bot_rails', '~> 5.0'
 end
 
 group :development do
