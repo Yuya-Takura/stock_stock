@@ -1,4 +1,15 @@
 class Stock < ApplicationRecord
+  def self.scrape_price
+    options = ::Selenium::WebDriver::Chrome::Options.new
+
+    options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument('--window-size=1400,1400')
+
+    driver = Selenium::WebDriver.for :chrome, options: options
+  end
+
   def self.scrape_url(code)
     user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36"
 
