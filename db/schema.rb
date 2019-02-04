@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_28_104449) do
+ActiveRecord::Schema.define(version: 2019_02_04_123735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "stock_prices", force: :cascade do |t|
+    t.date "date", null: false
+    t.bigint "stock_id", null: false
+    t.string "stock_code", null: false
+    t.float "open"
+    t.float "close"
+    t.float "highest"
+    t.float "lowest"
+    t.float "adjusted_close"
+    t.integer "volume"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["stock_id", "date"], name: "index_stock_prices_on_stock_id_and_date", unique: true
+  end
 
   create_table "stocks", force: :cascade do |t|
     t.string "code", null: false
@@ -24,4 +39,5 @@ ActiveRecord::Schema.define(version: 2019_01_28_104449) do
     t.index ["code"], name: "index_stocks_on_code", unique: true
   end
 
+  add_foreign_key "stock_prices", "stocks"
 end
