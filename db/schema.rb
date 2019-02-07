@@ -16,12 +16,12 @@ ActiveRecord::Schema.define(version: 2019_02_07_105204) do
   enable_extension "plpgsql"
 
   create_table "settlements", force: :cascade do |t|
-    t.date "date"
+    t.date "date", null: false
     t.bigint "stock_id", null: false
     t.string "stock_code", null: false
-    t.integer "quarter"
-    t.float "eps"
-    t.float "expected_eps"
+    t.integer "quarter", null: false
+    t.float "eps", null: false
+    t.float "expected_eps", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["stock_id", "date"], name: "index_settlements_on_stock_id_and_date", unique: true
