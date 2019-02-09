@@ -46,6 +46,7 @@ group :development, :test do
   gem 'dotenv-rails', '~>2.6'
   gem 'selenium-webdriver', '~> 3.141'
   gem 'factory_bot_rails', '~> 5.0'
+  gem 'rspec-rails', '~> 3.8'
 end
 
 group :development do

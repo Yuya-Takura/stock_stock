@@ -1,8 +1,8 @@
 class Settlement < ApplicationRecord
   QUARTER_COUNT = {
-      first: 1,
+      first:  1,
       second: 2,
-      third: 3,
+      third:  3,
       fourth: 4,
   }.freeze
 
