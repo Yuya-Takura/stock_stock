@@ -4,6 +4,7 @@ class CreateSettlements < ActiveRecord::Migration[5.2]
       t.date :date, null: false
       t.references :stock, foreign_key: true, index: false, null: false
       t.string :stock_code, null: false
+      t.integer :year, null: false
       t.integer :quarter, null: false
       t.float :eps, null: false
       t.float :expected_eps, null: false

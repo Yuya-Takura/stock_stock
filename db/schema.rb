@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_02_07_105204) do
     t.date "date", null: false
     t.bigint "stock_id", null: false
     t.string "stock_code", null: false
+    t.integer "year", null: false
     t.integer "quarter", null: false
     t.float "eps", null: false
     t.float "expected_eps", null: false
