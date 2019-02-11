@@ -7,7 +7,7 @@ class CreateSettlements < ActiveRecord::Migration[5.2]
       t.integer :quarter, null: false
       t.date :date, null: false
       t.float :eps, null: false
-      t.float :expected_eps, null: false
+      t.float :expected_eps
 
       t.timestamps
     end

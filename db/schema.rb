@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_02_07_105204) do
     t.integer "quarter", null: false
     t.date "date", null: false
     t.float "eps", null: false
-    t.float "expected_eps", null: false
+    t.float "expected_eps"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["stock_id", "date"], name: "index_settlements_on_stock_id_and_date", unique: true
