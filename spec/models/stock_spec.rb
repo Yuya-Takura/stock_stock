@@ -18,8 +18,8 @@ RSpec.describe Stock, type: :model do
   end
 
   it "is invalid with a duplicate code" do
-    FactoryBot.create(:stock, code: 2127)
-    dup_stock = FactoryBot.build(:stock, code: 2127)
+    FactoryBot.create(:stock)
+    dup_stock = FactoryBot.build(:stock, code: "1000")
     dup_stock.valid?
     expect(dup_stock.errors[:code]).to include("has already been taken")
   end
