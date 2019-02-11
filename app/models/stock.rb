@@ -2,6 +2,9 @@ class Stock < ApplicationRecord
   GOOGLE_SEARCH_URL = "https://www.google.co.jp/search?hl=jp&gl=JP&".freeze
   STOCK_PRICE_URL = "https://kabuoji3.com/stock/".freeze
 
+  validates :code, presence: true, uniqueness: true
+  validates :name, presence: true
+
   def self.scrape_price(code)
     this_year = Time.now.strftime("%Y").to_i
     base_url = STOCK_PRICE_URL
