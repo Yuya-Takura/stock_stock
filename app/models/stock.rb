@@ -16,7 +16,7 @@ class Stock < ApplicationRecord
       break if bool #表示中のページより前年度のボタンがない場合
       url = base_url + "#{code}/#{this_year - i}/"
       driver.navigate.to url
-      # 年次のCSVをダウンロード
+      # TODO:年次のCSVをダウンロード
       sleep 25
     end
   end
