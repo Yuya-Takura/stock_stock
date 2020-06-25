@@ -168,7 +168,7 @@ GEM
       activesupport (>= 4.2.8)
       json (~> 2.1.0)
       rest-client (~> 2.0.2)
-    rack (2.0.6)
+    rack (2.2.3)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
